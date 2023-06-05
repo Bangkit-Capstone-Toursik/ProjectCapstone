@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ProjectCapstone</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="title_sign_in">Sign In</string>
+    <string name="name">Name</string>
+    <string name="hello_new_mate">Hello, new mate!</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="people">people</string>
+    <string name="first_time_create_an_account_now">First time? Create an account now!</string>
 </resources>

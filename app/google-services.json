@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95151288275",
+    "project_id": "projectcapstone-5c13a",
+    "storage_bucket": "projectcapstone-5c13a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95151288275:android:79fb8774c61d1306ccc926",
+        "android_client_info": {
+          "package_name": "com.bangkit.tursik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBP6Syy4fpX7xrKUlkRJkOzRDJw9P_Q6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
