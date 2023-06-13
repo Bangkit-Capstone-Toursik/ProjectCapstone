@@ -1,0 +1,76 @@
+<!-- item_place.xml -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_place"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:paddingTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/place"
+            android:contentDescription="@string/place_foto" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/pmedium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@string/place_name" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/psemibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/location"
+                app:drawableStartCompat="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/psemibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/rating"
+                app:drawableStartCompat="@drawable/ic_star" />
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/psemibold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/price"
+                app:drawableStartCompat="@drawable/ic_payment" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

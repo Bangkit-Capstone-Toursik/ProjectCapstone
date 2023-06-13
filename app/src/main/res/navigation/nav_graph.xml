@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.bangkit.tursik.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bangkit.tursik.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.bangkit.tursik.ui.fragment.explore.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_exploreFragment_to_wisataReligiFragment"
+            app:destination="@id/wisataReligiFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_wisataSejarahFragment"
+            app:destination="@id/wisataSejarahFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_wisataPendidikanFragment"
+            app:destination="@id/wisataPendidikanFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_wisataAlamFragment"
+            app:destination="@id/wisataAlamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.bangkit.tursik.ui.fragment.wishlist.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.bangkit.tursik.ui.fragment.people.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.bangkit.tursik.ui.fragment.wishlist.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite"/>
+    <fragment
+        android:id="@+id/nearbyFragment"
+        android:name="com.bangkit.tursik.ui.fragment.home.NearbyFragment"
+        android:label="NearbyFragment"
+        tools:layout="@layout/fragment_nearby"/>
+    <fragment
+        android:id="@+id/recomendedFragment"
+        android:name="com.bangkit.tursik.ui.fragment.home.RecomendedFragment"
+        android:label="RecomendedFragment"
+        tools:layout="@layout/fragment_recomended"/>
+    <fragment
+        android:id="@+id/wisataAlamFragment"
+        android:name="com.bangkit.tursik.ui.fragment.explore.WisataAlamFragment"
+        android:label="WisataAlamFragment"
+        tools:layout="@layout/fragment_wisata_alam"/>
+    <fragment
+        android:id="@+id/wisataPendidikanFragment"
+        android:name="com.bangkit.tursik.ui.fragment.explore.WisataPendidikanFragment"
+        android:label="WisataPendidikanFragment"
+        tools:layout="@layout/fragment_wisata_pendidikan"/>
+    <fragment
+        android:id="@+id/wisataSejarahFragment"
+        android:name="com.bangkit.tursik.ui.fragment.explore.WisataSejarahFragment"
+        android:label="WisataSejarahFragment"
+        tools:layout="@layout/fragment_wisata_sejarah"/>
+    <fragment
+        android:id="@+id/wisataReligiFragment"
+        android:name="com.bangkit.tursik.ui.fragment.explore.WisataReligiFragment"
+        android:label="WisataReligiFragment"
+        tools:layout="@layout/fragment_wisata_religi"/>
+</navigation>

@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.ProjectCapstone" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -7,4 +7,19 @@
     </style>
 
     <style name="Theme.ProjectCapstone" parent="Base.Theme.ProjectCapstone" />
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_bar_rating</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">18dp</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/buttom_sheet_dialog</item>
+        <item name="behavior_peekHeight">500dp</item> <!-- Ubah nilai peekHeight sesuai kebutuhan Anda -->
+    </style>
 </resources>
