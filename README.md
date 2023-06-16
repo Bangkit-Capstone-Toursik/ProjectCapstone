@@ -25,7 +25,7 @@ Users can browse through categories such as religious, educational, historical, 
 The wish list serves as a personal collection and allows users to plan future trips or keep track of desired experiences.
 
 #### About Us:
--The "About" page provides information about the Tursik team, their mission, and vision.
+- The "About" page provides information about the Tursik team, their mission, and vision.
 Users can learn more about the app's purpose and the team behind its development.
 
 #### Privacy and Logout:
