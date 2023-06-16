@@ -13,16 +13,25 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="314dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/hey_elx"
-            android:textSize="30sp"
+            android:clickable="true"
             android:fontFamily="@font/psemibold"
-            android:paddingTop="40dp"
             android:paddingStart="20dp"
+            android:paddingTop="40dp"
             android:paddingEnd="20dp"
-            app:drawableEndCompat="@drawable/notifications" />
+            android:text="@string/hey_elx"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="30dp"
+            android:paddingEnd="20dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/notifications" />
 
 
     </LinearLayout>
@@ -52,47 +61,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="15dp">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/popular"
-            android:textColor="@color/color2"
-            android:layout_marginStart="20dp"
-            android:textSize="16sp"
-            android:fontFamily="@font/pmedium"
-            android:layout_marginEnd="8dp"/>
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/nearby"
-            android:fontFamily="@font/pmedium"
-            android:textSize="16sp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/recomended"
-            android:fontFamily="@font/pmedium"
-            android:textSize="16sp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"/>
+        android:orientation="vertical">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_home"
+            app:tabMode="fixed"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabSelectedTextColor="@color/color2"
+            app:tabIndicatorColor="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager_home"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_list_place"/>
+        android:layout_height="match_parent" />
 </LinearLayout>

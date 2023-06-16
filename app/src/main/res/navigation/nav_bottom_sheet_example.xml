@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_navigation"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        tools:layout="fragment"
+        android:name="com.bangkit.tursik.ui.fragment.detail.DetailDescriptionFragment">
+        <action
+            android:id="@+id/action_fragment_one_to_fragment_two"
+            app:destination="@id/fragmentTwo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTwo"
+        tools:layout="fragment"
+        android:name="com.bangkit.tursik.ui.fragment.detail.DetailReviewFragment">
+    <action
+        android:id="@+id/action_fragment_two_to_fragment_three"
+        app:destination="@id/fragmentThree" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThree"
+        tools:layout="fragment"
+        android:name="com.bangkit.tursik.ui.fragment.detail.DetailPhotoFragment"/>
+
+
+</navigation>

@@ -65,4 +65,6 @@
     <string name="privasi_title">Privasi</string>
     <string name="desc_about"><![CDATA[Dalam pengembangan aplikasi kami, kami menggabungkan keahlian teknologi dengan pengetahuan mendalam tentang industri pariwisata. Tujuan utama kami adalah memudahkan perjalanan dan memperkaya pengalaman wisatawan di seluruh dunia. Kami percaya bahwa setiap orang memiliki preferensi dan kebutuhan unik dalam perjalanan mereka. Oleh karena itu, kami merancang aplikasi kami agar dapat disesuaikan dengan preferensi individu pengguna, memberikan rekomendasi perjalanan yang relevan, dan menyediakan informasi terbaru tentang tujuan wisata yang menarik. Kami sangat menghargai umpan balik dari pengguna kami dan terus melakukan pembaruan dan perbaikan berdasarkan masukan tersebut. Kami berkomitmen untuk terus mengembangkan aplikasi kami agar dapat memberikan pengalaman terbaik dan memenuhi harapan wisatawan modern. Kami bangga menjadi bagian dari industri pariwisata dan berharap dapat menjadi mitra perjalanan yang andal bagi pengguna kami. Dengan aplikasi tourism kami, kami ingin menginspirasi dan memfasilitasi petualangan yang tak terlupakan bagi semua pengguna kami.]]></string>
     <string name="profile">Profile</string>
+    <string name="splashscreen">splashScreen</string>
+    <string name="all_place">All Place</string>
 </resources>

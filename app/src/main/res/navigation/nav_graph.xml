@@ -7,7 +7,7 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.bangkit.tursik.MainActivity"
+        android:name="com.bangkit.tursik.ui.main.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <fragment
@@ -44,16 +44,6 @@
         android:label="fragment_people"
         tools:layout="@layout/fragment_people" />
     <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="com.bangkit.tursik.ui.fragment.wishlist.FavoriteFragment"
-        android:label="FavoriteFragment"
-        tools:layout="@layout/fragment_favorite"/>
-    <fragment
-        android:id="@+id/nearbyFragment"
-        android:name="com.bangkit.tursik.ui.fragment.home.NearbyFragment"
-        android:label="NearbyFragment"
-        tools:layout="@layout/fragment_nearby"/>
-    <fragment
         android:id="@+id/recomendedFragment"
         android:name="com.bangkit.tursik.ui.fragment.home.RecomendedFragment"
         android:label="RecomendedFragment"
@@ -78,4 +68,5 @@
         android:name="com.bangkit.tursik.ui.fragment.explore.WisataReligiFragment"
         android:label="WisataReligiFragment"
         tools:layout="@layout/fragment_wisata_religi"/>
+
 </navigation>

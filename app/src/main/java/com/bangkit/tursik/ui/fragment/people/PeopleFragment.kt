@@ -11,7 +11,7 @@ import com.bangkit.tursik.R
 
 class PeopleFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var cardAkun: CardView
+
     private lateinit var cardPrivasi: CardView
     private lateinit var cardTentangKami: CardView
 
@@ -21,11 +21,11 @@ class PeopleFragment : Fragment(), View.OnClickListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_people, container, false)
 
-        cardAkun = view.findViewById(R.id.card_akun)
+
         cardPrivasi = view.findViewById(R.id.card_privasi)
         cardTentangKami = view.findViewById(R.id.card_tentangkami)
 
-        cardAkun.setOnClickListener(this)
+
         cardPrivasi.setOnClickListener(this)
         cardTentangKami.setOnClickListener(this)
 
@@ -34,10 +34,7 @@ class PeopleFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.card_akun -> {
-                val tujuanFragment = AboutFragment.newInstance("","")
-                navigateToFragment(tujuanFragment)
-            }
+
             R.id.card_privasi -> {
                 val tujuanFragment = AccountFragment.newInstance("","")
                 navigateToFragment(tujuanFragment)

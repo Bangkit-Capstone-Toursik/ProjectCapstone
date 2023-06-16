@@ -1,14 +1,17 @@
-package com.bangkit.tursik
+package com.bangkit.tursik.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.bangkit.tursik.R
 import com.bangkit.tursik.databinding.ActivityMainBinding
 import com.bangkit.tursik.ui.fragment.explore.ExploreFragment
 import com.bangkit.tursik.ui.fragment.home.HomeFragment
 import com.bangkit.tursik.ui.fragment.people.PeopleFragment
 import com.bangkit.tursik.ui.fragment.wishlist.WishlistFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

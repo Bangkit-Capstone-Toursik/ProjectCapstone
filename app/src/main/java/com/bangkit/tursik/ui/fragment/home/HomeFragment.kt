@@ -5,47 +5,54 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.tursik.AdapterList
-import com.bangkit.tursik.Place
+import android.widget.ImageView
+import androidx.fragment.app.activityViewModels
+import androidx.viewpager2.widget.ViewPager2
 import com.bangkit.tursik.R
-import com.bangkit.tursik.getDummyPlaceList
-import com.bangkit.tursik.ui.fragment.detail.DetailFragment
+import com.bangkit.tursik.ui.fragment.notification.NotificationFragment
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: AdapterList
-    private val placeList: List<Place> = getDummyPlaceList()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+    private lateinit var adapter: ViewPagerHome
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val ivNotification = view.findViewById<ImageView>(R.id.iv_notification)
+        tabLayout = view.findViewById(R.id.tab_layout_home)
+        viewPager = view.findViewById(R.id.viewPager_home)
 
+        val adapter = ViewPagerHome(this)
+        viewPager.adapter = adapter
 
-        recyclerView = view.findViewById(R.id.recyclerView)
-        adapter = AdapterList(placeList)
-        recyclerView.adapter = adapter
-
-        val layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.layoutManager = layoutManager
-
-        adapter.setOnItemClickListener(object : AdapterList.OnItemClickListener {
-            override fun onItemClick(place: Place) {
-                navigateToDetailFragment(place)
+        ivNotification.setOnClickListener {
+            val fragmentTujuan = NotificationFragment()
+            val fragmentManager = parentFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.buttom_nav, fragmentTujuan)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when(position){
+                0 -> {
+                    tab.text = "Popular"
+                }
+                1 -> {
+                    tab.text = "Recomended"
+                }
             }
-        })
-
+        }.attach()
         return view
-    }
-
-    private fun navigateToDetailFragment(place: Place) {
-        val detailFragment = DetailFragment.newInstance(place)
-        requireActivity().supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.buttom_nav, detailFragment)
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {
