@@ -25,6 +25,11 @@ class AdapterList(private val onItemClickListener: OnItemClickListener) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            val place = getItem(holder.adapterPosition)
+            onItemClickListener.onItemClick(place)
+        }
     }
 
 

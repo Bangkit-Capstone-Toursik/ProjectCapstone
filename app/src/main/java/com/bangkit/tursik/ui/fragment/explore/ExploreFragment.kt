@@ -10,21 +10,27 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkit.tursik.Place
 import com.bangkit.tursik.R
 import com.bangkit.tursik.data.adapter.AdapterListAll
 import com.bangkit.tursik.data.response.DataItemAll
 import com.bangkit.tursik.databinding.FragmentExploreBinding
-import com.bangkit.tursik.databinding.FragmentPopularBinding
 import com.bangkit.tursik.other.Result
-import com.bangkit.tursik.ui.fragment.detail.DetailFragment
-import com.google.api.ResourceProto.resource
+import com.bangkit.tursik.ui.fragment.detail.FullscreenBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.lifecycle.lifecycleScope
+import com.bangkit.tursik.data.dao.PlaceDao
+import com.bangkit.tursik.data.database.PlaceDb
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import com.bangkit.tursik.Place
+import com.bangkit.tursik.ui.fragment.detail.DetailFragment
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class ExploreFragment : Fragment() {
@@ -85,7 +91,6 @@ class ExploreFragment : Fragment() {
         recyclerView.adapter = adapterListAll
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        val searchView = binding.searchView
 
         progress = binding.progressBar
 
@@ -123,7 +128,7 @@ class ExploreFragment : Fragment() {
 
 
     private fun navigateToDetailFragment() {
-        val detailFragment = DetailFragment()
+        val detailFragment = FullscreenBottomSheetFragment()
         requireActivity().supportFragmentManager
             .beginTransaction()
             .replace(R.id.buttom_nav, detailFragment)

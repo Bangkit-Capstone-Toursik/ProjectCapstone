@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.bangkit.tursik.Place
 import com.bangkit.tursik.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class DetailPhotoFragment : Fragment() {
     private lateinit var place: Place

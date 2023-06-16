@@ -7,8 +7,10 @@ import com.bangkit.tursik.data.response.DestinationPopularResponse
 import com.bangkit.tursik.data.response.DestinationRecomededResponse
 import com.bangkit.tursik.data.response.DestinationReligiResponse
 import com.bangkit.tursik.data.response.DestinationSejarahResponse
+import com.bangkit.tursik.data.response.DetailDestinationResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ApiService {
 
@@ -39,4 +41,10 @@ interface ApiService {
     @GET("api/getByCategory/Sejarah")
     suspend fun getDestinationSejarah()
     : DestinationSejarahResponse
+
+    @GET("api/getByName/{name}")
+    suspend fun getDestinationDetail(
+        @Path("name") destionationName:String
+    )
+    : DetailDestinationResponse
 }

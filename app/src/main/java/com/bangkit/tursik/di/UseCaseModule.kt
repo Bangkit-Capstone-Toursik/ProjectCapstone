@@ -1,5 +1,7 @@
 package com.bangkit.tursik.di
 
+import com.bangkit.tursik.domain.usecase.detaildestination.DetailDeastinationInteractor
+import com.bangkit.tursik.domain.usecase.detaildestination.DetailDestinationUseCase
 import com.bangkit.tursik.domain.usecase.getdestinationalam.GetDestinationAlamInteractor
 import com.bangkit.tursik.domain.usecase.getdestinationalam.GetDestinationAlamUseCase
 import com.bangkit.tursik.domain.usecase.getdestinationall.GetDestinationAllInteractor
@@ -14,6 +16,8 @@ import com.bangkit.tursik.domain.usecase.getdestinationreligi.GetDestinationReli
 import com.bangkit.tursik.domain.usecase.getdestinationreligi.GetDestinationReligiUseCase
 import com.bangkit.tursik.domain.usecase.getdestinationsejarah.GetDestinationSejarahInteractor
 import com.bangkit.tursik.domain.usecase.getdestinationsejarah.GetDestinationSejarahUseCase
+import com.bangkit.tursik.domain.usecase.wishlist.WishlistInteractor
+import com.bangkit.tursik.domain.usecase.wishlist.WishlistUseCase
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -50,4 +54,13 @@ interface UseCaseModule {
     @Binds
     fun bindGetPlaceListSejarahUseCase(interactor: GetDestinationSejarahInteractor):
             GetDestinationSejarahUseCase
+
+    @Binds
+    fun bindGetPlaceListDetailUseCase(interactor: DetailDeastinationInteractor):
+            DetailDestinationUseCase
+
+    @Binds
+    fun bindFavouriteUserUseCase(interactor: WishlistInteractor): WishlistUseCase
+
+
 }

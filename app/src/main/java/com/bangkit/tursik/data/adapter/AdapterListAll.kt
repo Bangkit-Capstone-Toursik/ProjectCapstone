@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.tursik.R
 import com.bangkit.tursik.data.response.DataItemAll
+import android.widget.Filter
+import android.widget.Filterable
+import com.bangkit.tursik.databinding.ItemListPlaceBinding
+import java.util.Locale
 
 class AdapterListAll(private val onItemClickListener: OnItemClickListener) :
     ListAdapter<DataItemAll, AdapterListAll.ViewHolder>(DiffCallback()) {

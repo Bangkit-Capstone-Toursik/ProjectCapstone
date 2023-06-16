@@ -68,5 +68,24 @@
         android:name="com.bangkit.tursik.ui.fragment.explore.WisataReligiFragment"
         android:label="WisataReligiFragment"
         tools:layout="@layout/fragment_wisata_religi"/>
+    <fragment
+        android:id="@+id/fullscreenBottomSheetFragment"
+        android:name="com.bangkit.tursik.ui.fragment.detail.FullscreenBottomSheetFragment"
+        android:label="FullscreenBottomSheetFragment"
+        tools:layout="@layout/fragment_fullscreen_bottom_sheet">
+    <argument
+        android:name="place"
+        android:defaultValue=""
+        app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.bangkit.tursik.ui.fragment.home.PopularFragment"
+        android:label="fragment_popular"
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_popularFragment_to_fullscreenBottomSheetFragment2"
+            app:destination="@id/fullscreenBottomSheetFragment" />
+    </fragment>
 
 </navigation>

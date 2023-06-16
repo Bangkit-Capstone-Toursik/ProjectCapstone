@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.tursik.data.adapter.AdapterList
@@ -20,7 +23,7 @@ import com.bangkit.tursik.ui.fragment.detail.FullscreenBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class PopularFragment : Fragment() {
+class PopularFragment : Fragment(), OnItemClickListener {
 
     private lateinit var binding: FragmentPopularBinding
     private lateinit var recyclerView: RecyclerView
@@ -43,8 +46,10 @@ class PopularFragment : Fragment() {
         recyclerView = binding.rvPopular
         adapterList = AdapterList(object : AdapterList.OnItemClickListener {
             override fun onItemClick(place: DataItem) {
-                navigateToDetailFragment()
-
+                navigateToDetailFragment(place.name?:"")
+              /*  findNavController().navigate(
+                    PopularFragmentDirections.
+                    actionPopularFragmentToFullscreenBottomSheetFragment2(place.name?:""))*/
             }
         })
         recyclerView.adapter = adapterList
@@ -81,8 +86,11 @@ class PopularFragment : Fragment() {
 
 
 
-    private fun navigateToDetailFragment() {
+    private fun navigateToDetailFragment(place: String) {
         val detailFragment = FullscreenBottomSheetFragment()
+        val bundle = Bundle()
+        bundle.putString("place",place)
+        detailFragment.arguments = bundle
         requireActivity().supportFragmentManager
             .beginTransaction()
             .replace(R.id.buttom_nav, detailFragment)
@@ -90,4 +98,10 @@ class PopularFragment : Fragment() {
             .commit()
 
     }
+
+    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+    }
+
+
 }

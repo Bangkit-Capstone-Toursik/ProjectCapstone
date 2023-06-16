@@ -20,6 +20,7 @@ import com.bangkit.tursik.databinding.FragmentWisataAlamBinding
 import com.bangkit.tursik.databinding.FragmentWisataPendidikanBinding
 import com.bangkit.tursik.other.Result
 import com.bangkit.tursik.ui.fragment.detail.DetailFragment
+import com.bangkit.tursik.ui.fragment.detail.FullscreenBottomSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -82,11 +83,12 @@ class WisataPendidikanFragment : Fragment() {
 
 
     private fun navigateToDetailFragment() {
-        val detailFragment = DetailFragment()
+        val detailFragment = FullscreenBottomSheetFragment()
         requireActivity().supportFragmentManager
             .beginTransaction()
             .replace(R.id.buttom_nav, detailFragment)
             .addToBackStack(null)
             .commit()
+
     }
 }

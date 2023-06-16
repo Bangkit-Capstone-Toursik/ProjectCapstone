@@ -9,6 +9,7 @@ import com.bangkit.tursik.data.response.DestinationPopularResponse
 import com.bangkit.tursik.data.response.DestinationRecomededResponse
 import com.bangkit.tursik.data.response.DestinationReligiResponse
 import com.bangkit.tursik.data.response.DestinationSejarahResponse
+import com.bangkit.tursik.data.response.DetailDestinationResponse
 import com.bangkit.tursik.data.service.ApiService
 import com.bangkit.tursik.other.Result
 import kotlinx.coroutines.flow.Flow
@@ -46,5 +47,9 @@ class PlaceRepositoryImpl @Inject constructor(
 
     override suspend fun getDestinationSejarah(): Flow<Result<DestinationSejarahResponse>> {
         return apiDataSource.getDestinationSejarah()
+    }
+
+    override suspend fun getDestinationDetail(destionationName:String): Flow<Result<DetailDestinationResponse>> {
+        return apiDataSource.getDestinationDetail(destionationName)
     }
 }

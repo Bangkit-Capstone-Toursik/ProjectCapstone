@@ -6,7 +6,5 @@ import com.bangkit.tursik.other.Result
 import kotlinx.coroutines.flow.Flow
 
 interface GetDestinationAllUseCase {
-
-
     suspend fun getDestinationAll() : Flow<Result<DestinationAllResponse>>
 }

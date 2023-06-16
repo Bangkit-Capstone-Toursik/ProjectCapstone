@@ -14,4 +14,8 @@ class SessionManager(private val context: Context) {
     var isLoggedIn: Boolean
         get() = sharedPreferences.getBoolean(isLoggedInKey, false)
         set(value) = editor.putBoolean(isLoggedInKey, value).apply()
+
+    fun logout() {
+        sharedPreferences.edit().clear().apply()
+    }
 }
