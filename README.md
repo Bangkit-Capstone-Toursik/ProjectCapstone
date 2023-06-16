@@ -4,32 +4,39 @@ Toursik is a travel mobile application developed using Android Studio and Kotlin
 ## Features
 ### Toursik offers the following key features:
 
-#### User Registration and Authentication:
-- Users can create a new account or log in using their existing credentials.
+- User Registration and Authentication:
+
+Users can create a new account or log in using their existing credentials.
 Secure authentication mechanisms are implemented to protect user data.
 
-#### Popular Destinations:
-- The application showcases popular travel destinations based on ratings and user recommendations.
+- Popular Destinations:
+
+The application showcases popular travel destinations based on ratings and user recommendations.
 Users can explore these destinations and access detailed information about attractions, accommodations, and activities.
 
-#### Recommended Destinations:
-- Toursik provides personalized recommendations for travel destinations based on the user's budget preferences.
+- Recommended Destinations:
+
+Toursik provides personalized recommendations for travel destinations based on the user's budget preferences.
 Users can easily find destinations that match their desired price range.
 
-#### Explore Categories:
--The app includes different categories to explore various types of destinations.
+- Explore Categories:
+
+The app includes different categories to explore various types of destinations.
 Users can browse through categories such as religious, educational, historical, and natural attractions.
 
-#### Wish List:
-- Users can create a wish list of their favorite destinations, attractions, or activities.
+- Wish List:
+
+Users can create a wish list of their favorite destinations, attractions, or activities.
 The wish list serves as a personal collection and allows users to plan future trips or keep track of desired experiences.
 
-#### About Us:
-- The "About" page provides information about the Tursik team, their mission, and vision.
+- About Us:
+
+The "About" page provides information about the Tursik team, their mission, and vision.
 Users can learn more about the app's purpose and the team behind its development.
 
-#### Privacy and Logout:
-- The app includes a privacy policy section, ensuring users are aware of their data privacy rights.
+- Privacy and Logout:
+
+The app includes a privacy policy section, ensuring users are aware of their data privacy rights.
 Users can log out securely from their accounts to protect their information.
 Technologies Used
 
